@@ -12,6 +12,7 @@ RESET_PASSWORD_SUBJECT = "Your Request to Reset Your Barnes & Noble Password"
 def main(user_email : str) -> None:
 
     PATH = 'C:\\chromedriver.exe'
+    
     driver = webdriver.Chrome(PATH)
 
     # navigate to the website url
@@ -86,7 +87,7 @@ def print_email_message(search_string : str) -> str:
 
 
 if __name__=='__main__':
-    # email = input('Enter email here: ')
-    # main(email)
-    # time.sleep(20)
+    email = input('Enter email here: ')
+    main(email)
+    time.sleep(20)
     print(print_email_message(RESET_PASSWORD_SUBJECT))
